@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "getmove"
+name = "get_move"
 version = "0.1.0"
