@@ -3,5 +3,8 @@ name = "get_move"
 version = "0.1.0"
 edition = "2021"
 license = "MPL-2.0"
+description = "Index-like operations that returned owned values"
+documentation = "https://docs.rs/get_move"
+repository = "https://github.com/jmesmon/get_move.git"
 
 [dependencies]
