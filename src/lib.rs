@@ -36,6 +36,10 @@ pub trait Get {
     }
 }
 
+pub const fn chain<A, B>(a: A, b: B) -> Chain<A, B> {
+    Chain::new(a, b)
+}
+
 /// Combine 2 `Get`s in sequence into a Chain that also impliments `Get`
 #[cfg_attr(features = "defmt", derive(defmt::Debug))]
 #[derive(Debug, Clone, Copy)]
@@ -45,7 +49,7 @@ pub struct Chain<A, B> {
 }
 
 impl<A, B> Chain<A, B> {
-    fn new(a: A, b: B) -> Self {
+    const fn new(a: A, b: B) -> Self {
         Self { a, b }
     }
 }
